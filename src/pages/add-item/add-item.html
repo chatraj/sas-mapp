@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>
+      Add Item
+    </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="fullname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Class</ion-label>
+      <ion-select [(ngModel)]="clsid">
+        <ion-option *ngFor="let cl of clslist" [value]="cl.clsid">{{cl.clsname}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Fee Applicable From</ion-label>
+      <ion-select [(ngModel)]="month">
+        <ion-option *ngFor="let m of monthlist;  let i = index;" [value]="i+1">{{m}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Transport Applicable</ion-label>
+      <ion-select [(ngModel)]="transport">
+        <ion-option value="Y">Yes</ion-option>
+        <ion-option value="N">No</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item *ngIf="transport == 'Y'">
+      <ion-label floating>Distance Choice</ion-label>
+      <ion-select [(ngModel)]="tdid">
+        <ion-option *ngFor="let dc of distancechoice" [value]="dc.tdid">{{dc.distance}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <button full ion-button color="secondary" (click)="saveItem()">Save</button>
+
+</ion-content>

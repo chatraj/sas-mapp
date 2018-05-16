@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>
+      Fee Collection - {{fullname}}
+    </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      Previous Balance  :- Rs. {{feeSummary.prevdues}}
+    </ion-item>
+    <ion-item>
+      Current Fee       :- Rs. {{feeSummary.curtotal}}
+    </ion-item>
+    <ion-item *ngIf="feeSummary.curpmt > 0">
+      Current Payment   :- Rs. {{feeSummary.curpmt}}
+    </ion-item>
+    <ion-item>
+      Total Balance     :- Rs. {{feeSummary.prevdues + (feeSummary.curtotal - feeSummary.curpmt)}}
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Amount</ion-label>
+      <ion-input type="text" [(ngModel)]="amount"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button full ion-button color="secondary" (click)="saveItem()">Save</button>
+
+</ion-content>

@@ -1,0 +1,9 @@
+# files to be ignored for heroku
+/resources
+/src
+.angular-cli.json
+.editorconfig
+karma.conf.js
+protractor.conf.js
+tsconfig.json
+tslint.json

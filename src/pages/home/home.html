@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Hope Page
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Select Class</ion-label>
+      <ion-select [(ngModel)]="clsid" (ionChange)="onClassChange()">
+        <ion-option *ngFor="let cl of clslist" [value]="cl.clsid">{{cl.clsname}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item *ngFor="let item of items" (click)="feeCollection(item)">{{item.fullname}}</ion-item>
+  </ion-list>
+</ion-content>
