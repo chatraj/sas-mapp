@@ -709,8 +709,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var DataService = (function () {
     function DataService(http) {
         this.http = http;
-        this.api_endpoint = 'https://sas-dsapi-prod.herokuapp.com/';
+        //api_endpoint = 'https://sas-dsapi-prod.herokuapp.com/';
         //api_endpoint = 'http://localhost:3000/';
+        this.api_endpoint = '/';
         //monthlist = {"Apr":1, "May":2, "Jun":3, "Jul":4, "Aug":5, "Sep":6, "Oct":7, "Nov":8, "Dec":9, "Jan":10, "Feb":11, "Mar":12};
         this.monthlist = ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar"];
     }
