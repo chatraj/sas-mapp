@@ -22,6 +22,23 @@ exports.list = function(req, res) {
 
 };
 
+exports.summary = function(req, res) {
+	//getStudentList(req, res);
+	var dbc = db.getDBCon();
+
+  		dbc.query('select b.clsid, b.clsname, count(*) as scount from rl_student_session a, ms_class b where a.clsid = b.clsid group by b.clsid, b.clsname order by b.clsid', function(err, rows) {
+			//connection.end();
+			if (!err){
+                console.log('Getting student list');
+                res.send(rows);
+			}
+			else{
+				console.log('Error while performing Query.');
+			}
+		});
+
+};
+
 exports.find = function(req, res) {
 	//getStudentList(req, res);
 	var dbc = db.getDBCon();

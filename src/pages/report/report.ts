@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { DataService } from '../../services/data-service';
 /**
  * Generated class for the ReportPage page.
  *
@@ -15,11 +15,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ReportPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public feeSummary = [];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private dataService: DataService) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ReportPage');
+    this.dataService.getFeeSummaryReport()
+      .subscribe(
+        (items: any[]) => {
+          this.feeSummary = items;
+        },
+        (error) => console.log(error)
+      );
   }
 
 }

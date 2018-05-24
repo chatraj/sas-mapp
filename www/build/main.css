@@ -25677,3 +25677,39 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-bottom));
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
+
+page-report .header .col {
+  background-color: lightgrey;
+}
+
+page-report .col {
+  border: solid 1px grey;
+  border-bottom-style: none;
+  border-right-style: none;
+}
+
+page-report .col:last-child {
+  border-right: solid 1px grey;
+}
+
+page-report .row:last-child .col {
+  border-bottom: solid 1px grey;
+}
+
+page-ssummary .header .col {
+  background-color: lightgrey;
+}
+
+page-ssummary .col {
+  border: solid 1px grey;
+  border-bottom-style: none;
+  border-right-style: none;
+}
+
+page-ssummary .col:last-child {
+  border-right: solid 1px grey;
+}
+
+page-ssummary .row:last-child .col {
+  border-bottom: solid 1px grey;
+}

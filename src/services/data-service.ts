@@ -136,6 +136,36 @@ export class DataService {
       );
   }
 
+  getFeeSummaryReport() {
+    return this.http.get(this.api_endpoint + 'api/fee/summary')
+      .map(
+        (response: Response) => {
+          const data = response.json();
+          return data;
+        }
+      )
+      .catch(
+        (error: Response) => {
+          return Observable.throw('Something went wrong');
+        }
+      );
+  }
+
+  getStudentSummary() {
+    return this.http.get(this.api_endpoint + 'api/student/summary')
+      .map(
+        (response: Response) => {
+          const data = response.json();
+          return data;
+        }
+      )
+      .catch(
+        (error: Response) => {
+          return Observable.throw('Something went wrong');
+        }
+      );
+  }
+
   addCollection(data) {
     const headers = new Headers({'Content-Type': 'application/json'});
     // return this.http.post('https://udemy-ng-http.firebaseio.com/data.json',

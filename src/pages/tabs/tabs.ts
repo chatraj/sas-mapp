@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ReportPage } from '../report/report';
-import { AddItemPage } from '../add-item/add-item';
+import { SsummaryPage } from '../ssummary/ssummary';
 /**
  * Generated class for the TabsPage page.
  *
@@ -16,7 +16,7 @@ import { AddItemPage } from '../add-item/add-item';
 export class TabsPage {
 
   tab1Root: any = ReportPage;
-  tab2Root: any = AddItemPage;
+  tab2Root: any = SsummaryPage;
   myIndex: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

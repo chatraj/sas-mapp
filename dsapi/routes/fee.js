@@ -84,3 +84,25 @@ exports.payment = function(req, res) {
 		});
 
 };
+
+exports.feesummary = function(req, res) {
+	//getStudentList(req, res);
+	var dbc = db.getDBCon();
+	var cMonth = objUtil.getCurrentMonth();
+  dbc.query('select clsname, prevdue, curfee, curpmt, (prevdue + curfee) - curpmt as totalbal from ' +
+			'(select c1.clsid, c1.clsname, COALESCE(t1.dueamount - COALESCE(t2.pmtamount, 0), 0) as prevdue, COALESCE(t3.dueamount, 0) as curfee, COALESCE(t4.pmtamount, 0) as curpmt from ms_class c1 left join' +
+ 			'(select c.clsid, c.clsname, sum(amount) as dueamount from `trx_student_fee` a, rl_student_session b, ms_class c where a.ssid = b.ssid and b.clsid = c.clsid and month < ' + cMonth + ' and type = \'C\' group by c.clsname order by c.clsid) t1 on c1.clsid = t1.clsid left join' +
+			'(select c.clsid, c.clsname, sum(amount) as pmtamount from `trx_student_fee` a, rl_student_session b, ms_class c where a.ssid = b.ssid and b.clsid = c.clsid and month < ' + cMonth + ' and type = \'D\' group by c.clsname order by c.clsid) t2 on c1.clsid = t2.clsid left join' +
+			'(select c.clsid, c.clsname, sum(amount) as dueamount from `trx_student_fee` a, rl_student_session b, ms_class c where a.ssid = b.ssid and b.clsid = c.clsid and month = ' + cMonth + ' and type = \'C\' group by c.clsname order by c.clsid) t3 on c1.clsid = t3.clsid left join' +
+			'(select c.clsid, c.clsname, sum(amount) as pmtamount from `trx_student_fee` a, rl_student_session b, ms_class c where a.ssid = b.ssid and b.clsid = c.clsid and month = ' + cMonth + ' and type = \'D\' group by c.clsname order by c.clsid) t4 on c1.clsid = t4.clsid) temp', function(err, rows) {
+			//connection.end();
+			if (!err){
+                console.log('Getting payment record for a student');
+                res.send(rows);
+			}
+			else{
+				console.log('Error while performing Query.');
+			}
+		});
+
+};

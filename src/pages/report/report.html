@@ -10,12 +10,49 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      Reports
+      Fee Summary
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
+
+<ion-grid>
+  <ion-row class="row header">
+    <ion-col class="col col-2">
+      Class
+    </ion-col>
+    <ion-col class="col">
+      Prev Dues
+    </ion-col>
+    <ion-col class="col">
+      Cur Fee
+    </ion-col>
+    <ion-col class="col">
+      Cur Pmt
+    </ion-col>
+    <ion-col class="col">
+      Tot Bal
+    </ion-col>
+  </ion-row>
+  <ion-row class="row" *ngFor="let fs of feeSummary">
+    <ion-col class="col col-2">
+      {{fs.clsname}}
+    </ion-col>
+    <ion-col class="col">
+      {{fs.prevdue}}
+    </ion-col>
+    <ion-col class="col">
+      {{fs.curfee}}
+    </ion-col>
+    <ion-col class="col">
+      {{fs.curpmt}}
+    </ion-col>
+    <ion-col class="col">
+      {{fs.totalbal}}
+    </ion-col>
+  </ion-row>
+</ion-grid>
 
 </ion-content>

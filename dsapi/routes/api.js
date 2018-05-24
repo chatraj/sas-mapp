@@ -8,6 +8,8 @@ var cmaster = require('./cmaster');
 /* Student Registration & Enrollment */
 router.get('/student', student.list);
 
+router.get('/student/summary', student.summary);
+
 router.get('/student/:id', student.find);
 
 router.post('/student', student.create);
@@ -45,5 +47,6 @@ router.get('/fee/dues/:ssid/:month', fee.dues);
 
 router.get('/fee/payment/:id', fee.payment);
 
+router.get('/fee/summary', fee.feesummary);
 
 module.exports = router;
