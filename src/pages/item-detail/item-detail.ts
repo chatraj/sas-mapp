@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavParams } from 'ionic-angular';
+import { NavController, ViewController, NavParams } from 'ionic-angular';
+import { DataService } from '../../services/data-service';
 
 /**
  * Generated class for the ItemDetailPage page.
@@ -14,16 +15,29 @@ import { NavParams } from 'ionic-angular';
 })
 export class ItemDetailPage {
 
-  title;
-  description;
- 
-  constructor(public navParams: NavParams){
- 
+  fullname;
+  ssid;
+  month = 4;
+  amount;
+
+  public feeSummary = {};
+
+  constructor(public navCtrl: NavController, public view: ViewController, public navParams: NavParams, public dataService: DataService){
+
   }
- 
-  ionViewDidLoad() {
-    this.title = this.navParams.get('item').fullname;
-    this.description = this.navParams.get('item').fullname;
+
+  ionViewDidLoad(){
+    console.log('Getting Item Detail');
+    this.fullname = this.navParams.get('item').fullname;
+    this.ssid = this.navParams.get('item').ssid;
+    this.dataService.getFeeSummary(this.ssid, 12)
+      .subscribe(
+        (fsummary: any) => {
+          this.feeSummary = fsummary;
+        },
+        (error) => console.log(error)
+      );
   }
+
 
 }

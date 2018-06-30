@@ -20,8 +20,11 @@
     <ion-item *ngIf="feeSummary.curpmt > 0">
       Current Payment   :- Rs. {{feeSummary.curpmt}}
     </ion-item>
+    <ion-item *ngIf="feeSummary.curdsc > 0">
+      Current Discount   :- Rs. {{feeSummary.curdsc}}
+    </ion-item>
     <ion-item>
-      Total Balance     :- Rs. {{feeSummary.prevdues + (feeSummary.curtotal - feeSummary.curpmt)}}
+      Total Balance     :- Rs. {{feeSummary.prevdues + (feeSummary.curtotal - (feeSummary.curpmt + feeSummary.curdsc))}}
     </ion-item>
 
     <ion-item>

@@ -30,4 +30,12 @@ export class ReportPage {
       );
   }
 
+  public getSum(column) : number {
+    let sum = 0;
+    for(let i = 0; i < this.feeSummary.length; i++) {
+      sum += this.feeSummary[i][column];
+    }
+    return sum;
+  }
+
 }

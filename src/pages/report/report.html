@@ -33,6 +33,9 @@
       Cur Pmt
     </ion-col>
     <ion-col class="col">
+      Discount
+    </ion-col>
+    <ion-col class="col">
       Tot Bal
     </ion-col>
   </ion-row>
@@ -50,7 +53,30 @@
       {{fs.curpmt}}
     </ion-col>
     <ion-col class="col">
+      {{fs.curdsc}}
+    </ion-col>
+    <ion-col class="col">
       {{fs.totalbal}}
+    </ion-col>
+  </ion-row>
+  <ion-row class="row footer">
+    <ion-col class="col col-2">
+      Total
+    </ion-col>
+    <ion-col class="col">
+      {{ getSum('prevdue') }}
+    </ion-col>
+    <ion-col class="col">
+      {{ getSum('curfee') }}
+    </ion-col>
+    <ion-col class="col">
+      {{ getSum('curpmt') }}
+    </ion-col>
+    <ion-col class="col">
+      {{ getSum('curdsc') }}
+    </ion-col>
+    <ion-col class="col">
+      {{ getSum('totalbal') }}
     </ion-col>
   </ion-row>
 </ion-grid>
