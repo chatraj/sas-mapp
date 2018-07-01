@@ -193,46 +193,50 @@ exports.delete = function(req, res) {
 	var dbc = db.getDBCon();
   console.log('Row to be deleted for record:- ' + Number(req.params.id));
 	sid = req.params.id;
-	dbc.beginTransaction(function(err){
-		if (err) {
-			res.send(err);
-		}
-		dbc.query("delete from trx_student_fee where ssid in (select ssid from rl_student_session where sid = " + sid + ")", function(err, result) {
-			if (err) {
-				console.log('Error while deleting the fee record.');
-				dbc.rollback(function() {
-							res.send(err);
-				});
-			}
-			dbc.query("delete from rl_student_session where sid = " + sid, function(err, result) {
-				if (err) {
-					console.log('Error while deleting the fee record.');
-					dbc.rollback(function() {
-								res.send(err);
-					});
-				}
-				dbc.query("delete from rl_student_session where sid = " + sid, function(err, result) {
+	dbc.getConnection(function(error, con) {
+		if (!error){
+				con.beginTransaction(function(err){
 					if (err) {
-						console.log('Error while deleting the fee record.');
-						dbc.rollback(function() {
-									res.send(err);
-						});
+						res.send(err);
 					}
-					// On successful deletion of student records from all respective tables
-					dbc.commit(function(err) {
+					con.query("delete from trx_student_fee where ssid in (select ssid from rl_student_session where sid = " + sid + ")", function(err, result) {
 						if (err) {
-							console.log('Error while commit the transaction.');
-							dbc.rollback(function() {
+							console.log('Error while deleting the fee record.');
+							con.rollback(function() {
 										res.send(err);
 							});
 						}
-						console.log('commit success!');
-						res.send(result);
-					}); // End of transaction commit
-				}); // End of delete statement from ms_student
-			}); // End of delete statement from rl_student_session
-    }); // End of delete statement from trx_student_fee
-	}); // End of Transaction
+						con.query("delete from rl_student_session where sid = " + sid, function(err, result) {
+							if (err) {
+								console.log('Error while deleting the fee record.');
+								con.rollback(function() {
+											res.send(err);
+								});
+							}
+							con.query("delete from ms_student where sid = " + sid, function(err, result) {
+								if (err) {
+									console.log('Error while deleting the fee record.');
+									dbc.rollback(function() {
+												res.send(err);
+									});
+								}
+								// On successful deletion of student records from all respective tables
+								con.commit(function(err) {
+									if (err) {
+										console.log('Error while commit the transaction.');
+										con.rollback(function() {
+													res.send(err);
+										});
+									}
+									console.log('commit success!');
+									res.send(result);
+								}); // End of transaction commit
+							}); // End of delete statement from ms_student
+						}); // End of delete statement from rl_student_session
+			    }); // End of delete statement from trx_student_fee
+				}); // End of Transaction
+			}
+		}); // End of connection
 };
 
 exports.enroll = function(req, res) {
