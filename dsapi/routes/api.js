@@ -43,9 +43,9 @@ router.get('/class/feehead/:id', cmaster.classwisefeehead);
 
 router.post('/fee/collection', fee.collection);
 
-router.post('/fee/discount', fee.discount);
+router.post('/fee/adjustment', fee.adjustment);
 
-router.get('/fee/dues/:ssid/:month', fee.dues);
+router.get('/fee/dues/:ssid', fee.dues);
 
 router.get('/fee/payment/:id', fee.payment);
 

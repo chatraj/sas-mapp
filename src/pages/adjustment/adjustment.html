@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>
+      Fee Adjustment - {{fullname}}
+    </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      Total Outstanding     :- Rs. {{feeSummary.prevdues + (feeSummary.curtotal - (feeSummary.curpmt + feeSummary.curdsc))}}
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Type</ion-label>
+      <ion-select [(ngModel)]="atype">
+        <ion-option value="DS">Discount</ion-option>
+        <ion-option value="C">OneTime Fee</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Reason</ion-label>
+      <ion-input type="text" [(ngModel)]="areason"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Amount</ion-label>
+      <ion-input type="text" [(ngModel)]="amount"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button full ion-button color="secondary" (click)="validateData()">Save</button>
+
+</ion-content>

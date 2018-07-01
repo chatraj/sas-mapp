@@ -121,8 +121,8 @@ export class DataService {
       );
   }
 
-  getFeeSummary(ssid, month) {
-    return this.http.get(this.api_endpoint + 'api/fee/dues/' + ssid + '/' + month)
+  getFeeSummary(ssid) {
+    return this.http.get(this.api_endpoint + 'api/fee/dues/' + ssid)
       .map(
         (response: Response) => {
           const data = response.json();
@@ -172,6 +172,16 @@ export class DataService {
     //   servers,
     //   {headers: headers});
     return this.http.post(this.api_endpoint + 'api/fee/collection',
+      data,
+      {headers: headers});
+  }
+
+  addAdjustment(data) {
+    const headers = new Headers({'Content-Type': 'application/json'});
+    // return this.http.post('https://udemy-ng-http.firebaseio.com/data.json',
+    //   servers,
+    //   {headers: headers});
+    return this.http.post(this.api_endpoint + 'api/fee/adjustment',
       data,
       {headers: headers});
   }

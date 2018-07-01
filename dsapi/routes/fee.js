@@ -23,15 +23,15 @@ exports.collection = function(req, res) {
 
 };
 
-exports.discount = function(req, res) {
+exports.adjustment = function(req, res) {
 	//getStudentList(req, res);
 	var dbc = db.getDBCon();
   var cMonth = objUtil.getCurrentMonth();
 		console.log(req.body);
-    dbc.query("insert into trx_student_fee (ssid, type, month, amount) values (" + req.body.ssid + ", 'DS', " + cMonth + ", "+ req.body.amount +")", function(err, result) {
+    dbc.query("insert into trx_student_fee (ssid, type, month, remarks, amount) values (" + req.body.ssid + ", '"+ req.body.atype + "', " + cMonth + ", '"+ req.body.areason + "', "+ req.body.amount +")", function(err, result) {
         //connection.end();
         if (!err){
-            console.log('Discount row inserted' + result);
+            console.log('Fee adjustment row inserted' + result);
             res.send(result);
         }
         else{
