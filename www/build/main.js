@@ -7,7 +7,7 @@ webpackJsonp([2],{
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CollectionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_data_service__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_data_service__ = __webpack_require__(32);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -95,10 +95,9 @@ var CollectionPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-collection',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\collection\collection.html"*/'<ion-header>\n\n  <ion-toolbar color="secondary">\n\n    <ion-title>\n\n      Fee Collection - {{fullname}}\n\n    </ion-title>\n\n      <ion-buttons end>\n\n        <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>\n\n      </ion-buttons>\n\n    </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-item>\n\n      Total Outstanding     :- Rs. {{feeSummary.prevdues + (feeSummary.curtotal - (feeSummary.curpmt + feeSummary.curdsc))}}\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label floating>Amount</ion-label>\n\n      <ion-input type="text" [(ngModel)]="amount"></ion-input>\n\n    </ion-item>\n\n\n\n  </ion-list>\n\n\n\n  <button full ion-button color="secondary" (click)="validateData()">Save</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\collection\collection.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__services_data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_data_service__["a" /* DataService */]) === "function" && _e || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__services_data_service__["a" /* DataService */]])
     ], CollectionPage);
     return CollectionPage;
-    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=collection.js.map
@@ -112,7 +111,7 @@ var CollectionPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SsummaryPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_data_service__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_data_service__ = __webpack_require__(32);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -180,11 +179,11 @@ webpackEmptyAsyncContext.id = 163;
 
 var map = {
 	"../pages/report/report.module": [
-		682,
+		683,
 		1
 	],
 	"../pages/ssummary/ssummary.module": [
-		683,
+		684,
 		0
 	]
 };
@@ -204,718 +203,7 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 345:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu_menu__ = __webpack_require__(346);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-//import { HomePage } from '../home/home';
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var LoginPage = (function () {
-    function LoginPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    LoginPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad LoginPage');
-    };
-    LoginPage.prototype.doLogin = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__menu_menu__["a" /* MenuPage */]);
-    };
-    LoginPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\login\login.html"*/'<!--\n\n  Generated template for the LoginPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Login Page</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <button ion-button full (click)="doLogin()">Login</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\login\login.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-    ], LoginPage);
-    return LoginPage;
-}());
-
-//# sourceMappingURL=login.js.map
-
-/***/ }),
-
-/***/ 346:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_tabs__ = __webpack_require__(347);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(348);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__report_report__ = __webpack_require__(84);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-/**
- * Generated class for the MenuPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var MenuPage = (function () {
-    function MenuPage(navCtrl) {
-        this.navCtrl = navCtrl;
-        // Basic root for our content view
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */];
-        this.pages = [
-            { title: 'Home', pageName: __WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */], icon: 'home' },
-            { title: 'Report', pageName: __WEBPACK_IMPORTED_MODULE_2__tabs_tabs__["a" /* TabsPage */], tabComponent: 'ReportPage', index: 0, icon: 'analytics' },
-            { title: 'Setting', pageName: __WEBPACK_IMPORTED_MODULE_4__report_report__["a" /* ReportPage */], icon: 'cog' }
-        ];
-    }
-    MenuPage.prototype.openPage = function (page) {
-        var params = {};
-        // The index is equal to the order of our tabs inside tabs.ts
-        if (page.index) {
-            params = { tabIndex: page.index };
-        }
-        // The active child nav is our Tabs Navigation
-        if (this.nav.getActiveChildNav() && page.index != undefined) {
-            this.nav.getActiveChildNav().select(page.index);
-        }
-        else {
-            // Tabs are not active, so reset the root page
-            // In this case: moving to or from SpecialPage
-            this.nav.setRoot(page.pageName, params);
-        }
-    };
-    MenuPage.prototype.isActive = function (page) {
-        // Again the Tabs Navigation
-        var childNav = this.nav.getActiveChildNav();
-        if (childNav) {
-            if (childNav.getSelected() && childNav.getSelected().root === page.tabComponent) {
-                return 'primary';
-            }
-            return;
-        }
-        // Fallback needed when there is no active childnav (tabs not active)
-        if (this.nav.getActive() && this.nav.getActive().name === page.pageName) {
-            return 'primary';
-        }
-        return;
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */])
-    ], MenuPage.prototype, "nav", void 0);
-    MenuPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-menu',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\menu\menu.html"*/'<!--\n\n  Generated template for the MenuPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-menu [content]="content">\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menu</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list>\n\n      <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">\n\n          <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>\n\n          {{ p.title }}\n\n        </button>\n\n    </ion-list>\n\n  </ion-content>\n\n</ion-menu>\n\n\n\n<!-- main navigation -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\menu\menu.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]])
-    ], MenuPage);
-    return MenuPage;
-}());
-
-//# sourceMappingURL=menu.js.map
-
-/***/ }),
-
-/***/ 347:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__report_report__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ssummary_ssummary__ = __webpack_require__(150);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/**
- * Generated class for the TabsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var TabsPage = (function () {
-    function TabsPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.tab1Root = __WEBPACK_IMPORTED_MODULE_2__report_report__["a" /* ReportPage */];
-        this.tab2Root = __WEBPACK_IMPORTED_MODULE_3__ssummary_ssummary__["a" /* SsummaryPage */];
-        // Set the active tab based on the passed index from menu.ts
-        this.myIndex = navParams.data.tabIndex || 0;
-    }
-    TabsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad TabsPage');
-    };
-    TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tabs',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\tabs\tabs.html"*/'<!--\n\n  Generated template for the TabsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-tabs [selectedIndex]="myIndex">\n\n  <ion-tab [root]="tab1Root" tabTitle="Fee Summary" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Student Summary" tabIcon="contacts"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\tabs\tabs.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-    ], TabsPage);
-    return TabsPage;
-}());
-
-//# sourceMappingURL=tabs.js.map
-
-/***/ }),
-
-/***/ 348:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_item_add_item__ = __webpack_require__(349);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__collection_collection__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__item_detail_item_detail__ = __webpack_require__(350);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_data_service__ = __webpack_require__(38);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-var HomePage = (function () {
-    function HomePage(navCtrl, modalCtrl, dataService) {
-        this.navCtrl = navCtrl;
-        this.modalCtrl = modalCtrl;
-        this.dataService = dataService;
-        this.items = [];
-        this.clsid = 1;
-        this.clslist = [];
-    }
-    HomePage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.dataService.getClassList()
-            .subscribe(function (items) {
-            _this.clslist = items;
-            _this.onClassChange();
-        }, function (error) { return console.log(error); });
-    };
-    HomePage.prototype.onClassChange = function () {
-        var _this = this;
-        this.dataService.getClassWiseStudent(this.clsid)
-            .subscribe(function (items) {
-            _this.items = items;
-        }, function (error) { return console.log(error); });
-    };
-    HomePage.prototype.addItem = function () {
-        var _this = this;
-        var addModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__add_item_add_item__["a" /* AddItemPage */]);
-        addModal.onDidDismiss(function (item) {
-            if (item) {
-                _this.saveItem(item);
-            }
-        });
-        addModal.present();
-    };
-    HomePage.prototype.saveItem = function (item) {
-        var _this = this;
-        this.clsid = item.clsid;
-        this.dataService.addItem(item)
-            .subscribe(function (response) {
-            console.log(response);
-            _this.onClassChange();
-        }, function (error) { return console.log(error); });
-    };
-    HomePage.prototype.viewItem = function (item) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__item_detail_item_detail__["a" /* ItemDetailPage */], {
-            item: item
-        });
-    };
-    HomePage.prototype.feeCollection = function (item) {
-        var _this = this;
-        var addModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__collection_collection__["a" /* CollectionPage */], {
-            item: item
-        });
-        addModal.onDidDismiss(function (item) {
-            if (item) {
-                _this.saveCollection(item);
-            }
-        });
-        addModal.present();
-    };
-    HomePage.prototype.saveCollection = function (item) {
-        this.dataService.addCollection(item)
-            .subscribe(function (response) {
-            console.log(response);
-        }, function (error) { return console.log(error); });
-    };
-    HomePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="secondary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Hope Page\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-label>Select Class</ion-label>\n\n      <ion-select [(ngModel)]="clsid" (ionChange)="onClassChange()">\n\n        <ion-option *ngFor="let cl of clslist" [value]="cl.clsid">{{cl.clsname}}</ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n\n\n    <ion-item *ngFor="let item of items" (click)="viewItem(item)">{{item.fullname}}</ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\home\home.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */], __WEBPACK_IMPORTED_MODULE_5__services_data_service__["a" /* DataService */]])
-    ], HomePage);
-    return HomePage;
-}());
-
-//# sourceMappingURL=home.js.map
-
-/***/ }),
-
-/***/ 349:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddItemPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_data_service__ = __webpack_require__(38);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the AddItemPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var AddItemPage = (function () {
-    function AddItemPage(navCtrl, view, dataService) {
-        this.navCtrl = navCtrl;
-        this.view = view;
-        this.dataService = dataService;
-        this.clslist = [];
-        this.monthlist = [];
-        this.distancechoice = [];
-    }
-    AddItemPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.dataService.getClassList()
-            .subscribe(function (items) {
-            _this.clslist = items;
-        }, function (error) { return console.log(error); });
-        this.dataService.getDistanceChoice()
-            .subscribe(function (items) {
-            _this.distancechoice = items;
-        }, function (error) { return console.log(error); });
-        this.monthlist = this.dataService.getMonthList();
-    };
-    AddItemPage.prototype.saveItem = function () {
-        var newItem = {
-            fullname: this.fullname,
-            clsid: this.clsid,
-            month: this.month,
-            transport: this.transport,
-            tdid: this.tdid
-        };
-        this.view.dismiss(newItem);
-    };
-    AddItemPage.prototype.close = function () {
-        this.view.dismiss();
-    };
-    AddItemPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-add-item',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\add-item\add-item.html"*/'<ion-header>\n\n  <ion-toolbar color="secondary">\n\n    <ion-title>\n\n      Add Item\n\n    </ion-title>\n\n      <ion-buttons end>\n\n        <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>\n\n      </ion-buttons>\n\n    </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-label floating>Name</ion-label>\n\n      <ion-input type="text" [(ngModel)]="fullname"></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label floating>Class</ion-label>\n\n      <ion-select [(ngModel)]="clsid">\n\n        <ion-option *ngFor="let cl of clslist" [value]="cl.clsid">{{cl.clsname}}</ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label floating>Fee Applicable From</ion-label>\n\n      <ion-select [(ngModel)]="month">\n\n        <ion-option *ngFor="let m of monthlist;  let i = index;" [value]="i+1">{{m}}</ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label floating>Transport Applicable</ion-label>\n\n      <ion-select [(ngModel)]="transport">\n\n        <ion-option value="Y">Yes</ion-option>\n\n        <ion-option value="N">No</ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n    <ion-item *ngIf="transport == \'Y\'">\n\n      <ion-label floating>Distance Choice</ion-label>\n\n      <ion-select [(ngModel)]="tdid">\n\n        <ion-option *ngFor="let dc of distancechoice" [value]="dc.tdid">{{dc.distance}}</ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <button full ion-button color="secondary" (click)="saveItem()">Save</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\add-item\add-item.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__services_data_service__["a" /* DataService */]])
-    ], AddItemPage);
-    return AddItemPage;
-}());
-
-//# sourceMappingURL=add-item.js.map
-
-/***/ }),
-
-/***/ 350:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemDetailPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_data_service__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__collection_collection__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__adjustment_adjustment__ = __webpack_require__(351);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-/**
- * Generated class for the ItemDetailPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var ItemDetailPage = (function () {
-    function ItemDetailPage(navCtrl, view, navParams, modalCtrl, dataService) {
-        this.navCtrl = navCtrl;
-        this.view = view;
-        this.navParams = navParams;
-        this.modalCtrl = modalCtrl;
-        this.dataService = dataService;
-        //fullname;
-        //ssid;
-        //month = 4;
-        //amount;
-        this.item = {};
-        this.feeSummary = {};
-    }
-    ItemDetailPage.prototype.ionViewDidLoad = function () {
-        console.log('Getting Item Detail');
-        //this.fullname = this.navParams.get('item').fullname;
-        //this.ssid = this.navParams.get('item').ssid;
-        this.item = this.navParams.get('item');
-        this.getFeeData(this.navParams.get('item').ssid);
-    };
-    ItemDetailPage.prototype.getFeeData = function (ssid) {
-        var _this = this;
-        this.dataService.getFeeSummary(ssid)
-            .subscribe(function (fsummary) {
-            _this.feeSummary = fsummary;
-        }, function (error) { return console.log(error); });
-    };
-    ItemDetailPage.prototype.feeCollection = function (item) {
-        var _this = this;
-        var addModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__collection_collection__["a" /* CollectionPage */], {
-            item: item
-        });
-        addModal.onDidDismiss(function (item) {
-            if (item) {
-                _this.saveCollection(item);
-            }
-        });
-        addModal.present();
-    };
-    ItemDetailPage.prototype.saveCollection = function (item) {
-        var _this = this;
-        this.dataService.addCollection(item)
-            .subscribe(function (response) {
-            console.log(response);
-            _this.getFeeData(_this.item.ssid);
-        }, function (error) { return console.log(error); });
-    };
-    ItemDetailPage.prototype.feeAdjustment = function (item) {
-        var _this = this;
-        var addModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_4__adjustment_adjustment__["a" /* AdjustmentPage */], {
-            item: item
-        });
-        addModal.onDidDismiss(function (item) {
-            if (item) {
-                _this.saveAdjustment(item);
-            }
-        });
-        addModal.present();
-    };
-    ItemDetailPage.prototype.saveAdjustment = function (item) {
-        var _this = this;
-        this.dataService.addAdjustment(item)
-            .subscribe(function (response) {
-            console.log(response);
-            _this.getFeeData(_this.item.ssid);
-        }, function (error) { return console.log(error); });
-    };
-    ItemDetailPage.prototype.goback = function () {
-        this.navCtrl.pop();
-    };
-    ItemDetailPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-item-detail',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\item-detail\item-detail.html"*/'<ion-header>\n\n  <ion-toolbar color="secondary">\n\n    <ion-title>\n\n      Fee Summary - {{item.fullname}}\n\n    </ion-title>\n\n    <ion-buttons end>\n\n        <button ion-button icon-only (click)="feeAdjustment(item)"><ion-icon name="more"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-item>\n\n      Previous Balance  :- Rs. {{feeSummary.prevdues}}\n\n    </ion-item>\n\n    <ion-item>\n\n      Current Fee       :- Rs. {{feeSummary.curtotal}}\n\n    </ion-item>\n\n    <ion-item *ngIf="feeSummary.curpmt > 0">\n\n      Current Payment   :- Rs. {{feeSummary.curpmt}}\n\n    </ion-item>\n\n    <ion-item *ngIf="feeSummary.curdsc > 0">\n\n      Current Discount   :- Rs. {{feeSummary.curdsc}}\n\n    </ion-item>\n\n    <ion-item>\n\n      Total Balance     :- Rs. {{feeSummary.prevdues + (feeSummary.curtotal - (feeSummary.curpmt + feeSummary.curdsc))}}\n\n    </ion-item>\n\n\n\n  </ion-list>\n\n\n\n  <button ion-button color="secondary" (click)="goback()">Back</button>\n\n\n\n  <button ion-button color="secondary" (click)="feeCollection(item)">Collection</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\item-detail\item-detail.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */], __WEBPACK_IMPORTED_MODULE_2__services_data_service__["a" /* DataService */]])
-    ], ItemDetailPage);
-    return ItemDetailPage;
-}());
-
-//# sourceMappingURL=item-detail.js.map
-
-/***/ }),
-
-/***/ 351:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdjustmentPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_data_service__ = __webpack_require__(38);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the AdjustmentPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var AdjustmentPage = (function () {
-    function AdjustmentPage(navCtrl, view, navParams, alertCtrl, dataService) {
-        this.navCtrl = navCtrl;
-        this.view = view;
-        this.navParams = navParams;
-        this.alertCtrl = alertCtrl;
-        this.dataService = dataService;
-        this.atype = "DS";
-        this.feeSummary = {};
-    }
-    AdjustmentPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.fullname = this.navParams.get('item').fullname;
-        this.ssid = this.navParams.get('item').ssid;
-        this.dataService.getFeeSummary(this.ssid)
-            .subscribe(function (fsummary) {
-            _this.feeSummary = fsummary;
-        }, function (error) { return console.log(error); });
-    };
-    AdjustmentPage.prototype.validateData = function () {
-        if (this.amount && this.amount > 0 && this.areason && this.areason != "")
-            this.showConfirm();
-        else
-            this.showAlert();
-    };
-    AdjustmentPage.prototype.showConfirm = function () {
-        var _this = this;
-        var confirm = this.alertCtrl.create({
-            title: 'Confirmation',
-            message: 'Are your sure to save the data',
-            buttons: [
-                {
-                    text: 'No',
-                    handler: function () {
-                        console.log('Disagree clicked');
-                    }
-                },
-                {
-                    text: 'Yes',
-                    handler: function () {
-                        console.log('Agree clicked');
-                        _this.saveItem();
-                    }
-                }
-            ]
-        });
-        confirm.present();
-    };
-    AdjustmentPage.prototype.showAlert = function () {
-        var alert = this.alertCtrl.create({
-            title: 'Alert',
-            subTitle: 'Please enter the amount & reason both',
-            buttons: ['OK']
-        });
-        alert.present();
-    };
-    AdjustmentPage.prototype.saveItem = function () {
-        var newItem = {
-            ssid: this.ssid,
-            atype: this.atype,
-            areason: this.areason,
-            amount: this.amount
-        };
-        this.view.dismiss(newItem);
-    };
-    AdjustmentPage.prototype.close = function () {
-        this.view.dismiss();
-    };
-    AdjustmentPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-adjustment',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\adjustment\adjustment.html"*/'<ion-header>\n  <ion-toolbar color="secondary">\n    <ion-title>\n      Fee Adjustment - {{fullname}}\n    </ion-title>\n      <ion-buttons end>\n        <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>\n      </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item>\n      Total Outstanding     :- Rs. {{feeSummary.prevdues + (feeSummary.curtotal - (feeSummary.curpmt + feeSummary.curdsc))}}\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Type</ion-label>\n      <ion-select [(ngModel)]="atype">\n        <ion-option value="DS">Discount</ion-option>\n        <ion-option value="C">OneTime Fee</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Reason</ion-label>\n      <ion-input type="text" [(ngModel)]="areason"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Amount</ion-label>\n      <ion-input type="text" [(ngModel)]="amount"></ion-input>\n    </ion-item>\n\n  </ion-list>\n\n  <button full ion-button color="secondary" (click)="validateData()">Save</button>\n\n</ion-content>\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\adjustment\adjustment.html"*/,
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__services_data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_data_service__["a" /* DataService */]) === "function" && _e || Object])
-    ], AdjustmentPage);
-    return AdjustmentPage;
-    var _a, _b, _c, _d, _e;
-}());
-
-//# sourceMappingURL=adjustment.js.map
-
-/***/ }),
-
-/***/ 352:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(357);
-
-
-Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
-//# sourceMappingURL=main.js.map
-
-/***/ }),
-
-/***/ 357:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(341);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__ = __webpack_require__(344);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(681);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(345);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_menu_menu__ = __webpack_require__(346);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__ = __webpack_require__(347);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(348);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_add_item_add_item__ = __webpack_require__(349);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_item_detail_item_detail__ = __webpack_require__(350);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_collection_collection__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_adjustment_adjustment__ = __webpack_require__(351);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_report_report__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_ssummary_ssummary__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_data_service__ = __webpack_require__(38);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var AppModule = (function () {
-    function AppModule() {
-    }
-    AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_7__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_8__pages_menu_menu__["a" /* MenuPage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__["a" /* TabsPage */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_add_item_add_item__["a" /* AddItemPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_item_detail_item_detail__["a" /* ItemDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_collection_collection__["a" /* CollectionPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_adjustment_adjustment__["a" /* AdjustmentPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_report_report__["a" /* ReportPage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_ssummary_ssummary__["a" /* SsummaryPage */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
-                    links: [
-                        { loadChildren: '../pages/report/report.module#ReportPageModule', name: 'ReportPage', segment: 'report', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/ssummary/ssummary.module#SsummaryPageModule', name: 'SsummaryPage', segment: 'ssummary', priority: 'low', defaultHistory: [] }
-                    ]
-                })
-            ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["b" /* IonicApp */]],
-            entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_7__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_8__pages_menu_menu__["a" /* MenuPage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__["a" /* TabsPage */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_add_item_add_item__["a" /* AddItemPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_item_detail_item_detail__["a" /* ItemDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_collection_collection__["a" /* CollectionPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_adjustment_adjustment__["a" /* AdjustmentPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_report_report__["a" /* ReportPage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_ssummary_ssummary__["a" /* SsummaryPage */]
-            ],
-            providers: [
-                __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */],
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["c" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_17__services_data_service__["a" /* DataService */]
-            ]
-        })
-    ], AppModule);
-    return AppModule;
-}());
-
-//# sourceMappingURL=app.module.js.map
-
-/***/ }),
-
-/***/ 38:
+/***/ 32:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1065,6 +353,13 @@ var DataService = (function () {
         //   {headers: headers});
         return this.http.post(this.api_endpoint + 'api/fee/adjustment', data, { headers: headers });
     };
+    DataService.prototype.paymentPosting = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
+        // return this.http.post('https://udemy-ng-http.firebaseio.com/data.json',
+        //   servers,
+        //   {headers: headers});
+        return this.http.post(this.api_endpoint + 'api/fee/paymentposting', {}, { headers: headers });
+    };
     DataService.prototype.getMonthList = function () {
         return this.monthlist;
     };
@@ -1076,6 +371,768 @@ var DataService = (function () {
 }());
 
 //# sourceMappingURL=data-service.js.map
+
+/***/ }),
+
+/***/ 345:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu_menu__ = __webpack_require__(346);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+//import { HomePage } from '../home/home';
+/**
+ * Generated class for the LoginPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var LoginPage = (function () {
+    function LoginPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    LoginPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad LoginPage');
+    };
+    LoginPage.prototype.doLogin = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__menu_menu__["a" /* MenuPage */]);
+    };
+    LoginPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-login',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\login\login.html"*/'<!--\n\n  Generated template for the LoginPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Login Page</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <button ion-button full (click)="doLogin()">Login</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\login\login.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+    ], LoginPage);
+    return LoginPage;
+}());
+
+//# sourceMappingURL=login.js.map
+
+/***/ }),
+
+/***/ 346:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(347);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__admin_admin__ = __webpack_require__(351);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__report_report__ = __webpack_require__(84);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the MenuPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var MenuPage = (function () {
+    function MenuPage(navCtrl) {
+        this.navCtrl = navCtrl;
+        // Basic root for our content view
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */];
+        this.pages = [
+            { title: 'Home', pageName: __WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */], icon: 'home' },
+            { title: 'Admin', pageName: __WEBPACK_IMPORTED_MODULE_3__admin_admin__["a" /* AdminPage */], icon: 'help-buoy' },
+            { title: 'Report', pageName: __WEBPACK_IMPORTED_MODULE_4__report_report__["a" /* ReportPage */], tabComponent: 'ReportPage', index: 0, icon: 'analytics' },
+            { title: 'Setting', pageName: __WEBPACK_IMPORTED_MODULE_4__report_report__["a" /* ReportPage */], icon: 'cog' }
+        ];
+    }
+    MenuPage.prototype.openPage = function (page) {
+        var params = {};
+        // The index is equal to the order of our tabs inside tabs.ts
+        if (page.index) {
+            params = { tabIndex: page.index };
+        }
+        // The active child nav is our Tabs Navigation
+        if (this.nav.getActiveChildNav() && page.index != undefined) {
+            this.nav.getActiveChildNav().select(page.index);
+        }
+        else {
+            // Tabs are not active, so reset the root page
+            // In this case: moving to or from SpecialPage
+            this.nav.setRoot(page.pageName, params);
+        }
+    };
+    MenuPage.prototype.isActive = function (page) {
+        // Again the Tabs Navigation
+        var childNav = this.nav.getActiveChildNav();
+        if (childNav) {
+            if (childNav.getSelected() && childNav.getSelected().root === page.tabComponent) {
+                return 'primary';
+            }
+            return;
+        }
+        // Fallback needed when there is no active childnav (tabs not active)
+        if (this.nav.getActive() && this.nav.getActive().name === page.pageName) {
+            return 'primary';
+        }
+        return;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */])
+    ], MenuPage.prototype, "nav", void 0);
+    MenuPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-menu',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\menu\menu.html"*/'<!--\n\n  Generated template for the MenuPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-menu [content]="content">\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menu</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list>\n\n      <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">\n\n          <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>\n\n          {{ p.title }}\n\n        </button>\n\n    </ion-list>\n\n  </ion-content>\n\n</ion-menu>\n\n\n\n<!-- main navigation -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\menu\menu.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]])
+    ], MenuPage);
+    return MenuPage;
+}());
+
+//# sourceMappingURL=menu.js.map
+
+/***/ }),
+
+/***/ 347:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_item_add_item__ = __webpack_require__(348);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__collection_collection__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__item_detail_item_detail__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_data_service__ = __webpack_require__(32);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var HomePage = (function () {
+    function HomePage(navCtrl, modalCtrl, dataService) {
+        this.navCtrl = navCtrl;
+        this.modalCtrl = modalCtrl;
+        this.dataService = dataService;
+        this.items = [];
+        this.clsid = 1;
+        this.clslist = [];
+    }
+    HomePage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.dataService.getClassList()
+            .subscribe(function (items) {
+            _this.clslist = items;
+            _this.onClassChange();
+        }, function (error) { return console.log(error); });
+    };
+    HomePage.prototype.onClassChange = function () {
+        var _this = this;
+        this.dataService.getClassWiseStudent(this.clsid)
+            .subscribe(function (items) {
+            _this.items = items;
+        }, function (error) { return console.log(error); });
+    };
+    HomePage.prototype.addItem = function () {
+        var _this = this;
+        var addModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__add_item_add_item__["a" /* AddItemPage */]);
+        addModal.onDidDismiss(function (item) {
+            if (item) {
+                _this.saveItem(item);
+            }
+        });
+        addModal.present();
+    };
+    HomePage.prototype.saveItem = function (item) {
+        var _this = this;
+        this.clsid = item.clsid;
+        this.dataService.addItem(item)
+            .subscribe(function (response) {
+            console.log(response);
+            _this.onClassChange();
+        }, function (error) { return console.log(error); });
+    };
+    HomePage.prototype.viewItem = function (item) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__item_detail_item_detail__["a" /* ItemDetailPage */], {
+            item: item
+        });
+    };
+    HomePage.prototype.feeCollection = function (item) {
+        var _this = this;
+        var addModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__collection_collection__["a" /* CollectionPage */], {
+            item: item
+        });
+        addModal.onDidDismiss(function (item) {
+            if (item) {
+                _this.saveCollection(item);
+            }
+        });
+        addModal.present();
+    };
+    HomePage.prototype.saveCollection = function (item) {
+        this.dataService.addCollection(item)
+            .subscribe(function (response) {
+            console.log(response);
+        }, function (error) { return console.log(error); });
+    };
+    HomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-home',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="secondary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Hope Page\n\n    </ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-label>Select Class</ion-label>\n\n      <ion-select [(ngModel)]="clsid" (ionChange)="onClassChange()">\n\n        <ion-option *ngFor="let cl of clslist" [value]="cl.clsid">{{cl.clsname}}</ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n\n\n    <ion-item *ngFor="let item of items" (click)="viewItem(item)">{{item.fullname}}</ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\home\home.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */], __WEBPACK_IMPORTED_MODULE_5__services_data_service__["a" /* DataService */]])
+    ], HomePage);
+    return HomePage;
+}());
+
+//# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 348:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddItemPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_data_service__ = __webpack_require__(32);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the AddItemPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var AddItemPage = (function () {
+    function AddItemPage(navCtrl, view, dataService) {
+        this.navCtrl = navCtrl;
+        this.view = view;
+        this.dataService = dataService;
+        this.clslist = [];
+        this.monthlist = [];
+        this.distancechoice = [];
+    }
+    AddItemPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.dataService.getClassList()
+            .subscribe(function (items) {
+            _this.clslist = items;
+        }, function (error) { return console.log(error); });
+        this.dataService.getDistanceChoice()
+            .subscribe(function (items) {
+            _this.distancechoice = items;
+        }, function (error) { return console.log(error); });
+        this.monthlist = this.dataService.getMonthList();
+    };
+    AddItemPage.prototype.saveItem = function () {
+        var newItem = {
+            fullname: this.fullname,
+            clsid: this.clsid,
+            month: this.month,
+            transport: this.transport,
+            tdid: this.tdid
+        };
+        this.view.dismiss(newItem);
+    };
+    AddItemPage.prototype.close = function () {
+        this.view.dismiss();
+    };
+    AddItemPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-add-item',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\add-item\add-item.html"*/'<ion-header>\n\n  <ion-toolbar color="secondary">\n\n    <ion-title>\n\n      Add Item\n\n    </ion-title>\n\n      <ion-buttons end>\n\n        <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>\n\n      </ion-buttons>\n\n    </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-label floating>Name</ion-label>\n\n      <ion-input type="text" [(ngModel)]="fullname"></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label floating>Class</ion-label>\n\n      <ion-select [(ngModel)]="clsid">\n\n        <ion-option *ngFor="let cl of clslist" [value]="cl.clsid">{{cl.clsname}}</ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label floating>Fee Applicable From</ion-label>\n\n      <ion-select [(ngModel)]="month">\n\n        <ion-option *ngFor="let m of monthlist;  let i = index;" [value]="i+1">{{m}}</ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label floating>Transport Applicable</ion-label>\n\n      <ion-select [(ngModel)]="transport">\n\n        <ion-option value="Y">Yes</ion-option>\n\n        <ion-option value="N">No</ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n    <ion-item *ngIf="transport == \'Y\'">\n\n      <ion-label floating>Distance Choice</ion-label>\n\n      <ion-select [(ngModel)]="tdid">\n\n        <ion-option *ngFor="let dc of distancechoice" [value]="dc.tdid">{{dc.distance}}</ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <button full ion-button color="secondary" (click)="saveItem()">Save</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\add-item\add-item.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__services_data_service__["a" /* DataService */]])
+    ], AddItemPage);
+    return AddItemPage;
+}());
+
+//# sourceMappingURL=add-item.js.map
+
+/***/ }),
+
+/***/ 349:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemDetailPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_data_service__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__collection_collection__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__adjustment_adjustment__ = __webpack_require__(350);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the ItemDetailPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ItemDetailPage = (function () {
+    function ItemDetailPage(navCtrl, view, navParams, modalCtrl, dataService) {
+        this.navCtrl = navCtrl;
+        this.view = view;
+        this.navParams = navParams;
+        this.modalCtrl = modalCtrl;
+        this.dataService = dataService;
+        //fullname;
+        //ssid;
+        //month = 4;
+        //amount;
+        this.item = {};
+        this.feeSummary = {};
+    }
+    ItemDetailPage.prototype.ionViewDidLoad = function () {
+        console.log('Getting Item Detail');
+        //this.fullname = this.navParams.get('item').fullname;
+        //this.ssid = this.navParams.get('item').ssid;
+        this.item = this.navParams.get('item');
+        this.getFeeData(this.navParams.get('item').ssid);
+    };
+    ItemDetailPage.prototype.getFeeData = function (ssid) {
+        var _this = this;
+        this.dataService.getFeeSummary(ssid)
+            .subscribe(function (fsummary) {
+            _this.feeSummary = fsummary;
+        }, function (error) { return console.log(error); });
+    };
+    ItemDetailPage.prototype.feeCollection = function (item) {
+        var _this = this;
+        var addModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__collection_collection__["a" /* CollectionPage */], {
+            item: item
+        });
+        addModal.onDidDismiss(function (item) {
+            if (item) {
+                _this.saveCollection(item);
+            }
+        });
+        addModal.present();
+    };
+    ItemDetailPage.prototype.saveCollection = function (item) {
+        var _this = this;
+        this.dataService.addCollection(item)
+            .subscribe(function (response) {
+            console.log(response);
+            _this.getFeeData(_this.navParams.get('item').ssid);
+        }, function (error) { return console.log(error); });
+    };
+    ItemDetailPage.prototype.feeAdjustment = function (item) {
+        var _this = this;
+        var addModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_4__adjustment_adjustment__["a" /* AdjustmentPage */], {
+            item: item
+        });
+        addModal.onDidDismiss(function (item) {
+            if (item) {
+                _this.saveAdjustment(item);
+            }
+        });
+        addModal.present();
+    };
+    ItemDetailPage.prototype.saveAdjustment = function (item) {
+        var _this = this;
+        this.dataService.addAdjustment(item)
+            .subscribe(function (response) {
+            console.log(response);
+            _this.getFeeData(_this.navParams.get('item').ssid);
+        }, function (error) { return console.log(error); });
+    };
+    ItemDetailPage.prototype.goback = function () {
+        this.navCtrl.pop();
+    };
+    ItemDetailPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-item-detail',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\item-detail\item-detail.html"*/'<ion-header>\n\n  <ion-toolbar color="secondary">\n\n    <ion-title>\n\n      Fee Summary - {{item.fullname}}\n\n    </ion-title>\n\n    <ion-buttons end>\n\n        <button ion-button icon-only (click)="feeAdjustment(item)"><ion-icon name="more"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-item>\n\n      Previous Balance  :- Rs. {{feeSummary.prevdues}}\n\n    </ion-item>\n\n    <ion-item>\n\n      Current Fee       :- Rs. {{feeSummary.curtotal}}\n\n    </ion-item>\n\n    <ion-item *ngIf="feeSummary.curpmt > 0">\n\n      Current Payment   :- Rs. {{feeSummary.curpmt}}\n\n    </ion-item>\n\n    <ion-item *ngIf="feeSummary.curdsc > 0">\n\n      Current Discount   :- Rs. {{feeSummary.curdsc}}\n\n    </ion-item>\n\n    <ion-item>\n\n      Total Balance     :- Rs. {{feeSummary.prevdues + (feeSummary.curtotal - (feeSummary.curpmt + feeSummary.curdsc))}}\n\n    </ion-item>\n\n\n\n  </ion-list>\n\n\n\n  <button ion-button color="secondary" (click)="goback()">Back</button>\n\n\n\n  <button ion-button color="secondary" (click)="feeCollection(item)">Collection</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\item-detail\item-detail.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */], __WEBPACK_IMPORTED_MODULE_2__services_data_service__["a" /* DataService */]])
+    ], ItemDetailPage);
+    return ItemDetailPage;
+}());
+
+//# sourceMappingURL=item-detail.js.map
+
+/***/ }),
+
+/***/ 350:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdjustmentPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_data_service__ = __webpack_require__(32);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the AdjustmentPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var AdjustmentPage = (function () {
+    function AdjustmentPage(navCtrl, view, navParams, alertCtrl, dataService) {
+        this.navCtrl = navCtrl;
+        this.view = view;
+        this.navParams = navParams;
+        this.alertCtrl = alertCtrl;
+        this.dataService = dataService;
+        this.atype = "DS";
+        this.feeSummary = {};
+    }
+    AdjustmentPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.fullname = this.navParams.get('item').fullname;
+        this.ssid = this.navParams.get('item').ssid;
+        this.dataService.getFeeSummary(this.ssid)
+            .subscribe(function (fsummary) {
+            _this.feeSummary = fsummary;
+        }, function (error) { return console.log(error); });
+    };
+    AdjustmentPage.prototype.validateData = function () {
+        if (this.amount && this.amount > 0 && this.areason && this.areason != "")
+            this.showConfirm();
+        else
+            this.showAlert();
+    };
+    AdjustmentPage.prototype.showConfirm = function () {
+        var _this = this;
+        var confirm = this.alertCtrl.create({
+            title: 'Confirmation',
+            message: 'Are your sure to save the data',
+            buttons: [
+                {
+                    text: 'No',
+                    handler: function () {
+                        console.log('Disagree clicked');
+                    }
+                },
+                {
+                    text: 'Yes',
+                    handler: function () {
+                        console.log('Agree clicked');
+                        _this.saveItem();
+                    }
+                }
+            ]
+        });
+        confirm.present();
+    };
+    AdjustmentPage.prototype.showAlert = function () {
+        var alert = this.alertCtrl.create({
+            title: 'Alert',
+            subTitle: 'Please enter the amount & reason both',
+            buttons: ['OK']
+        });
+        alert.present();
+    };
+    AdjustmentPage.prototype.saveItem = function () {
+        var newItem = {
+            ssid: this.ssid,
+            atype: this.atype,
+            areason: this.areason,
+            amount: this.amount
+        };
+        this.view.dismiss(newItem);
+    };
+    AdjustmentPage.prototype.close = function () {
+        this.view.dismiss();
+    };
+    AdjustmentPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-adjustment',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\adjustment\adjustment.html"*/'<ion-header>\n  <ion-toolbar color="secondary">\n    <ion-title>\n      Fee Adjustment - {{fullname}}\n    </ion-title>\n      <ion-buttons end>\n        <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>\n      </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item>\n      Total Outstanding     :- Rs. {{feeSummary.prevdues + (feeSummary.curtotal - (feeSummary.curpmt + feeSummary.curdsc))}}\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Type</ion-label>\n      <ion-select [(ngModel)]="atype">\n        <ion-option value="DS">Discount</ion-option>\n        <ion-option value="C">OneTime Fee</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Reason</ion-label>\n      <ion-input type="text" [(ngModel)]="areason"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Amount</ion-label>\n      <ion-input type="text" [(ngModel)]="amount"></ion-input>\n    </ion-item>\n\n  </ion-list>\n\n  <button full ion-button color="secondary" (click)="validateData()">Save</button>\n\n</ion-content>\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\adjustment\adjustment.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__services_data_service__["a" /* DataService */]])
+    ], AdjustmentPage);
+    return AdjustmentPage;
+}());
+
+//# sourceMappingURL=adjustment.js.map
+
+/***/ }),
+
+/***/ 351:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdminPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_data_service__ = __webpack_require__(32);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the AdminPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var AdminPage = (function () {
+    function AdminPage(navCtrl, view, navParams, alertCtrl, dataService) {
+        this.navCtrl = navCtrl;
+        this.view = view;
+        this.navParams = navParams;
+        this.alertCtrl = alertCtrl;
+        this.dataService = dataService;
+        this.clsid = 1;
+        this.clslist = [];
+    }
+    AdminPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AdminPage');
+    };
+    AdminPage.prototype.actionConfirm = function () {
+        var _this = this;
+        var confirm = this.alertCtrl.create({
+            title: 'Confirmation',
+            message: 'This action will move all collection data to previous month, are your sure to take this action',
+            buttons: [
+                {
+                    text: 'No',
+                    handler: function () {
+                        console.log('Disagree clicked');
+                    }
+                },
+                {
+                    text: 'Yes',
+                    handler: function () {
+                        console.log('Agree clicked');
+                        _this.paymentPosting();
+                    }
+                }
+            ]
+        });
+        confirm.present();
+    };
+    AdminPage.prototype.showAlert = function () {
+        var alert = this.alertCtrl.create({
+            title: 'Alert',
+            subTitle: 'Collection data has been moved to previous month',
+            buttons: ['OK']
+        });
+        alert.present();
+    };
+    AdminPage.prototype.paymentPosting = function () {
+        var _this = this;
+        this.dataService.paymentPosting()
+            .subscribe(function (response) {
+            console.log(response);
+            _this.showAlert();
+        }, function (error) { return console.log(error); });
+    };
+    AdminPage.prototype.commingSoon = function () {
+        var alert = this.alertCtrl.create({
+            title: 'Alert',
+            subTitle: 'Feature to be added in future',
+            buttons: ['OK']
+        });
+        alert.present();
+    };
+    AdminPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-admin',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\admin\admin.html"*/'<ion-header>\n  <ion-navbar color="secondary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      Admin Page\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-card>\n    <ion-card-header>\n      Data Correction\n    </ion-card-header>\n\n    <ion-list>\n      <button ion-item (click)="actionConfirm()">\n        <ion-icon name="navigate" item-start></ion-icon>\n        Payment Posting to Previous Month\n      </button>\n\n      <button ion-item (click)="commingSoon()">\n        <ion-icon name="trash" item-start></ion-icon>\n        Student Drop Out\n      </button>\n\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\admin\admin.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__services_data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_data_service__["a" /* DataService */]) === "function" && _e || Object])
+    ], AdminPage);
+    return AdminPage;
+    var _a, _b, _c, _d, _e;
+}());
+
+//# sourceMappingURL=admin.js.map
+
+/***/ }),
+
+/***/ 352:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(357);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 357:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(164);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__ = __webpack_require__(344);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(681);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(345);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_menu_menu__ = __webpack_require__(346);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__ = __webpack_require__(682);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(347);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_add_item_add_item__ = __webpack_require__(348);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_item_detail_item_detail__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_collection_collection__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_adjustment_adjustment__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_admin_admin__ = __webpack_require__(351);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_report_report__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_ssummary_ssummary__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_data_service__ = __webpack_require__(32);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AppModule = (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_menu_menu__["a" /* MenuPage */],
+                __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_add_item_add_item__["a" /* AddItemPage */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_item_detail_item_detail__["a" /* ItemDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_collection_collection__["a" /* CollectionPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_adjustment_adjustment__["a" /* AdjustmentPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_admin_admin__["a" /* AdminPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_report_report__["a" /* ReportPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_ssummary_ssummary__["a" /* SsummaryPage */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
+                    links: [
+                        { loadChildren: '../pages/report/report.module#ReportPageModule', name: 'ReportPage', segment: 'report', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/ssummary/ssummary.module#SsummaryPageModule', name: 'SsummaryPage', segment: 'ssummary', priority: 'low', defaultHistory: [] }
+                    ]
+                })
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["b" /* IonicApp */]],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_menu_menu__["a" /* MenuPage */],
+                __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_add_item_add_item__["a" /* AddItemPage */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_item_detail_item_detail__["a" /* ItemDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_collection_collection__["a" /* CollectionPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_adjustment_adjustment__["a" /* AdjustmentPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_admin_admin__["a" /* AdminPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_report_report__["a" /* ReportPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_ssummary_ssummary__["a" /* SsummaryPage */]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */],
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["c" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_18__services_data_service__["a" /* DataService */]
+            ]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
 
 /***/ }),
 
@@ -1126,6 +1183,59 @@ var MyApp = (function () {
 
 /***/ }),
 
+/***/ 682:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__report_report__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ssummary_ssummary__ = __webpack_require__(150);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the TabsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var TabsPage = (function () {
+    function TabsPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.tab1Root = __WEBPACK_IMPORTED_MODULE_2__report_report__["a" /* ReportPage */];
+        this.tab2Root = __WEBPACK_IMPORTED_MODULE_3__ssummary_ssummary__["a" /* SsummaryPage */];
+        // Set the active tab based on the passed index from menu.ts
+        this.myIndex = navParams.data.tabIndex || 0;
+    }
+    TabsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad TabsPage');
+    };
+    TabsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-tabs',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\tabs\tabs.html"*/'<!--\n\n  Generated template for the TabsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-tabs [selectedIndex]="myIndex">\n\n  <ion-tab [root]="tab1Root" tabTitle="Fee Summary" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Student Summary" tabIcon="contacts"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\tabs\tabs.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+    ], TabsPage);
+    return TabsPage;
+}());
+
+//# sourceMappingURL=tabs.js.map
+
+/***/ }),
+
 /***/ 84:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1133,7 +1243,7 @@ var MyApp = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReportPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_data_service__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_data_service__ = __webpack_require__(32);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);

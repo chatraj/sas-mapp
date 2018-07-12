@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Admin Page
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      Data Correction
+    </ion-card-header>
+
+    <ion-list>
+      <button ion-item (click)="actionConfirm()">
+        <ion-icon name="navigate" item-start></ion-icon>
+        Payment Posting to Previous Month
+      </button>
+
+      <button ion-item (click)="commingSoon()">
+        <ion-icon name="trash" item-start></ion-icon>
+        Student Drop Out
+      </button>
+
+    </ion-list>
+  </ion-card>
+</ion-content>

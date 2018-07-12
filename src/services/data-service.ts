@@ -186,6 +186,16 @@ export class DataService {
       {headers: headers});
   }
 
+  paymentPosting() {
+    const headers = new Headers({'Content-Type': 'application/json'});
+    // return this.http.post('https://udemy-ng-http.firebaseio.com/data.json',
+    //   servers,
+    //   {headers: headers});
+    return this.http.post(this.api_endpoint + 'api/fee/paymentposting',
+      {},
+      {headers: headers});
+  }
+
   getMonthList() {
     return this.monthlist;
   }

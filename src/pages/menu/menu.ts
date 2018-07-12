@@ -1,8 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Nav } from 'ionic-angular';
 
-import { TabsPage } from '../tabs/tabs';
 import { HomePage } from '../home/home';
+import { AdminPage } from '../admin/admin';
 import { ReportPage } from '../report/report';
 
 
@@ -34,7 +34,8 @@ export class MenuPage {
 
   pages: PageInterface[] = [
     { title: 'Home', pageName: HomePage, icon: 'home' },
-    { title: 'Report', pageName: TabsPage, tabComponent: 'ReportPage', index: 0, icon: 'analytics' },
+    { title: 'Admin', pageName: AdminPage,  icon: 'help-buoy' },
+    { title: 'Report', pageName: ReportPage, tabComponent: 'ReportPage', index: 0, icon: 'analytics' },
     { title: 'Setting', pageName: ReportPage,  icon: 'cog' }
   ];
 

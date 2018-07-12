@@ -41,6 +41,32 @@ exports.adjustment = function(req, res) {
 
 };
 
+exports.paymentposting = function(req, res) {
+	//getStudentList(req, res);
+	var dbc = db.getDBCon();
+  var fMonth, tMonth;
+
+	if (req.body.fmonth) {
+		fMonth = req.body.fmonth;
+		tMonth = req.body.tmonth;
+	}
+	else {
+		fMonth = objUtil.getCurrentMonth();
+		tMonth = objUtil.getCurrentMonth() - 1;
+	}
+	console.log(req.body);
+  dbc.query("update trx_student_fee set month = " + tMonth + " where month = " + fMonth + " and type like 'D%'", function(err, result) {
+      //connection.end();
+      if (!err){
+          console.log('Payment posting from one month to another month' + result);
+          res.send(result);
+      }
+      else{
+          console.log('Error while performing Query.');
+      }
+  });
+};
+
 exports.dues = function(req, res) {
 	//getStudentList(req, res);
 	var dbc = db.getDBCon();

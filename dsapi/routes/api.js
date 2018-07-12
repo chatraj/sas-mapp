@@ -18,6 +18,8 @@ router.put('/student/:id', student.update);
 
 router.delete('/student/:id', student.delete);
 
+router.post('/student/dropout', student.dropout);
+
 router.post('/student/enroll', student.enroll);
 
 router.put('/student/enroll/:id', student.enrollupdate);
@@ -50,5 +52,7 @@ router.get('/fee/dues/:ssid', fee.dues);
 router.get('/fee/payment/:id', fee.payment);
 
 router.get('/fee/summary', fee.feesummary);
+
+router.post('/fee/paymentposting', fee.paymentposting);
 
 module.exports = router;

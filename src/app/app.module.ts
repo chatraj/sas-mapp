@@ -14,6 +14,7 @@ import { AddItemPage } from '../pages/add-item/add-item';
 import { ItemDetailPage } from '../pages/item-detail/item-detail';
 import { CollectionPage } from '../pages/collection/collection';
 import { AdjustmentPage } from '../pages/adjustment/adjustment';
+import { AdminPage } from '../pages/admin/admin';
 import { ReportPage } from '../pages/report/report';
 import { SsummaryPage } from '../pages/ssummary/ssummary';
 import { DataService } from '../services/data-service';
@@ -30,6 +31,7 @@ import { DataService } from '../services/data-service';
     ItemDetailPage,
     CollectionPage,
     AdjustmentPage,
+    AdminPage,
     ReportPage,
     SsummaryPage
   ],
@@ -49,6 +51,7 @@ import { DataService } from '../services/data-service';
     ItemDetailPage,
     CollectionPage,
     AdjustmentPage,
+    AdminPage,
     ReportPage,
     SsummaryPage
   ],
