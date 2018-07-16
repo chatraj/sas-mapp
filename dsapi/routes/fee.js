@@ -155,12 +155,29 @@ exports.feesummary = function(req, res) {
 			'(select c.clsid, c.clsname, sum(amount) as dscamount from `trx_student_fee` a, rl_student_session b, ms_class c where a.ssid = b.ssid and b.clsid = c.clsid and month = ' + cMonth + ' and type = \'DS\' group by c.clsname order by c.clsid) t41 on c1.clsid = t41.clsid) temp', function(err, rows) {
 			//connection.end();
 			if (!err){
-                console.log('Getting payment record for a student');
+                console.log('Getting class wise fee summary');
                 res.send(rows);
 			}
 			else{
 				console.log('Error while performing Query.');
 			}
 		});
+};
 
+exports.monthlyfeesummary = function(req, res) {
+	//getStudentList(req, res);
+	var dbc = db.getDBCon();
+	var cMonth = objUtil.getCurrentMonth();
+  dbc.query('select month, sum(payable) as feeamt, sum(payment) as pmtamt, sum(discount) as dsamt, sum(dropout) as doamt, sum(payable) - (sum(payment) + sum(discount) + sum(dropout)) as totbal from ' +
+	'(select month, if(type=\'C\', amount, 0) as payable, if(type=\'D\', amount, 0) as payment, if(type=\'DS\', amount, 0) as discount, ' +
+	'if(type=\'DO\', amount, 0) as dropout from trx_student_fee) tmp where month <= '+ cMonth +' group by month', function(err, rows) {
+			//connection.end();
+			if (!err){
+        console.log('Getting month wise fee summary');
+        res.send(rows);
+			}
+			else{
+				console.log('Error while performing Query.');
+			}
+		});
 };

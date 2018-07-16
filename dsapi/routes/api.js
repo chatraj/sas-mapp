@@ -51,7 +51,9 @@ router.get('/fee/dues/:ssid', fee.dues);
 
 router.get('/fee/payment/:id', fee.payment);
 
-router.get('/fee/summary', fee.feesummary);
+router.get('/fee/summary/class', fee.feesummary);
+
+router.get('/fee/summary/month', fee.monthlyfeesummary);
 
 router.post('/fee/paymentposting', fee.paymentposting);
 

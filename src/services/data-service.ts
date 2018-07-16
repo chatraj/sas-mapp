@@ -136,8 +136,8 @@ export class DataService {
       );
   }
 
-  getFeeSummaryReport() {
-    return this.http.get(this.api_endpoint + 'api/fee/summary')
+  getFeeSummaryReport(rtype) {
+    return this.http.get(this.api_endpoint + 'api/fee/summary/' + rtype )
       .map(
         (response: Response) => {
           const data = response.json();

@@ -17,8 +17,19 @@
 
 
 <ion-content padding>
+<ion-list>
+  <ion-item>
+    <ion-label>Select Report Type</ion-label>
+    <ion-select [(ngModel)]="rtype" (ionChange)="onTypeChange()">
+      <ion-option value="class">Class Wise</ion-option>
+      <ion-option value="month">Month Wise</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
 
-<ion-grid>
+<!-- Class wise fee summary -->
+
+<ion-grid *ngIf="rtype == 'class'">
   <ion-row class="row header">
     <ion-col class="col col-2">
       Class
@@ -39,7 +50,7 @@
       Tot Bal
     </ion-col>
   </ion-row>
-  <ion-row class="row" *ngFor="let fs of feeSummary">
+  <ion-row class="row" *ngFor="let fs of feeSummaryClassWise">
     <ion-col class="col col-2">
       {{fs.clsname}}
     </ion-col>
@@ -77,6 +88,71 @@
     </ion-col>
     <ion-col class="col">
       {{ getSum('totalbal') }}
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<!-- Month wise fee summary -->
+
+<ion-grid *ngIf="rtype == 'month'">
+  <ion-row class="row header">
+    <ion-col class="col col-2">
+      Month
+    </ion-col>
+    <ion-col class="col">
+      Fee
+    </ion-col>
+    <ion-col class="col">
+      Pmt
+    </ion-col>
+    <ion-col class="col">
+      Disc
+    </ion-col>
+    <ion-col class="col">
+      Drop
+    </ion-col>
+    <ion-col class="col">
+      Tot Bal
+    </ion-col>
+  </ion-row>
+  <ion-row class="row" *ngFor="let fs of feeSummaryMonthWise">
+    <ion-col class="col col-2">
+      {{monthlist[fs.month-1]}}
+    </ion-col>
+    <ion-col class="col">
+      {{fs.feeamt}}
+    </ion-col>
+    <ion-col class="col">
+      {{fs.pmtamt}}
+    </ion-col>
+    <ion-col class="col">
+      {{fs.dsamt}}
+    </ion-col>
+    <ion-col class="col">
+      {{fs.doamt}}
+    </ion-col>
+    <ion-col class="col">
+      {{fs.totbal}}
+    </ion-col>
+  </ion-row>
+  <ion-row class="row footer">
+    <ion-col class="col col-2">
+      Total
+    </ion-col>
+    <ion-col class="col">
+      {{ getSum('feeamt') }}
+    </ion-col>
+    <ion-col class="col">
+      {{ getSum('pmtamt') }}
+    </ion-col>
+    <ion-col class="col">
+      {{ getSum('dsamt') }}
+    </ion-col>
+    <ion-col class="col">
+      {{ getSum('doamt') }}
+    </ion-col>
+    <ion-col class="col">
+      {{ getSum('totbal') }}
     </ion-col>
   </ion-row>
 </ion-grid>

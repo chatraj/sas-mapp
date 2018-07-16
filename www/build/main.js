@@ -210,7 +210,7 @@ module.exports = webpackAsyncContext;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(377);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(378);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__);
@@ -319,8 +319,8 @@ var DataService = (function () {
             return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].throw('Something went wrong');
         });
     };
-    DataService.prototype.getFeeSummaryReport = function () {
-        return this.http.get(this.api_endpoint + 'api/fee/summary')
+    DataService.prototype.getFeeSummaryReport = function (rtype) {
+        return this.http.get(this.api_endpoint + 'api/fee/summary/' + rtype)
             .map(function (response) {
             var data = response.json();
             return data;
@@ -435,6 +435,7 @@ var LoginPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(347);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__admin_admin__ = __webpack_require__(351);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__report_report__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__tabs_tabs__ = __webpack_require__(352);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -444,6 +445,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -463,7 +465,7 @@ var MenuPage = (function () {
         this.pages = [
             { title: 'Home', pageName: __WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */], icon: 'home' },
             { title: 'Admin', pageName: __WEBPACK_IMPORTED_MODULE_3__admin_admin__["a" /* AdminPage */], icon: 'help-buoy' },
-            { title: 'Report', pageName: __WEBPACK_IMPORTED_MODULE_4__report_report__["a" /* ReportPage */], tabComponent: 'ReportPage', index: 0, icon: 'analytics' },
+            { title: 'Report', pageName: __WEBPACK_IMPORTED_MODULE_5__tabs_tabs__["a" /* TabsPage */], tabComponent: 'TabsPage', index: 0, icon: 'analytics' },
             { title: 'Setting', pageName: __WEBPACK_IMPORTED_MODULE_4__report_report__["a" /* ReportPage */], icon: 'cog' }
         ];
     }
@@ -1004,10 +1006,9 @@ var AdminPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-admin',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\admin\admin.html"*/'<ion-header>\n  <ion-navbar color="secondary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      Admin Page\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-card>\n    <ion-card-header>\n      Data Correction\n    </ion-card-header>\n\n    <ion-list>\n      <button ion-item (click)="actionConfirm()">\n        <ion-icon name="navigate" item-start></ion-icon>\n        Payment Posting to Previous Month\n      </button>\n\n      <button ion-item (click)="commingSoon()">\n        <ion-icon name="trash" item-start></ion-icon>\n        Student Drop Out\n      </button>\n\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\admin\admin.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__services_data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_data_service__["a" /* DataService */]) === "function" && _e || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__services_data_service__["a" /* DataService */]])
     ], AdminPage);
     return AdminPage;
-    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=admin.js.map
@@ -1018,9 +1019,62 @@ var AdminPage = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__report_report__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ssummary_ssummary__ = __webpack_require__(150);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the TabsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var TabsPage = (function () {
+    function TabsPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.tab1Root = __WEBPACK_IMPORTED_MODULE_2__report_report__["a" /* ReportPage */];
+        this.tab2Root = __WEBPACK_IMPORTED_MODULE_3__ssummary_ssummary__["a" /* SsummaryPage */];
+        // Set the active tab based on the passed index from menu.ts
+        this.myIndex = navParams.data.tabIndex || 0;
+    }
+    TabsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad TabsPage');
+    };
+    TabsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-tabs',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\tabs\tabs.html"*/'<!--\n\n  Generated template for the TabsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-tabs [selectedIndex]="myIndex">\n\n  <ion-tab [root]="tab1Root" tabTitle="Fee Summary" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Student Summary" tabIcon="contacts"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\tabs\tabs.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+    ], TabsPage);
+    return TabsPage;
+}());
+
+//# sourceMappingURL=tabs.js.map
+
+/***/ }),
+
+/***/ 353:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(357);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(358);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1028,7 +1082,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 357:
+/***/ 358:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1039,10 +1093,10 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(341);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__ = __webpack_require__(344);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(681);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(682);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(345);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_menu_menu__ = __webpack_require__(346);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__ = __webpack_require__(682);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__ = __webpack_require__(352);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(347);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_add_item_add_item__ = __webpack_require__(348);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_item_detail_item_detail__ = __webpack_require__(349);
@@ -1136,7 +1190,7 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 681:
+/***/ 682:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1183,59 +1237,6 @@ var MyApp = (function () {
 
 /***/ }),
 
-/***/ 682:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__report_report__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ssummary_ssummary__ = __webpack_require__(150);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/**
- * Generated class for the TabsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var TabsPage = (function () {
-    function TabsPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.tab1Root = __WEBPACK_IMPORTED_MODULE_2__report_report__["a" /* ReportPage */];
-        this.tab2Root = __WEBPACK_IMPORTED_MODULE_3__ssummary_ssummary__["a" /* SsummaryPage */];
-        // Set the active tab based on the passed index from menu.ts
-        this.myIndex = navParams.data.tabIndex || 0;
-    }
-    TabsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad TabsPage');
-    };
-    TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tabs',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\tabs\tabs.html"*/'<!--\n\n  Generated template for the TabsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-tabs [selectedIndex]="myIndex">\n\n  <ion-tab [root]="tab1Root" tabTitle="Fee Summary" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="Student Summary" tabIcon="contacts"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\tabs\tabs.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-    ], TabsPage);
-    return TabsPage;
-}());
-
-//# sourceMappingURL=tabs.js.map
-
-/***/ }),
-
 /***/ 84:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1267,25 +1268,50 @@ var ReportPage = (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.dataService = dataService;
-        this.feeSummary = [];
+        this.feeSummaryClassWise = [];
+        this.feeSummaryMonthWise = [];
+        this.rtype = 'class';
+        this.monthlist = [];
     }
     ReportPage.prototype.ionViewDidLoad = function () {
+        this.getClassWiseData();
+        this.monthlist = this.dataService.getMonthList();
+    };
+    ReportPage.prototype.onTypeChange = function () {
+        if (this.rtype == 'class')
+            this.getClassWiseData();
+        else
+            this.getMonthWiseData();
+    };
+    ReportPage.prototype.getClassWiseData = function () {
         var _this = this;
-        this.dataService.getFeeSummaryReport()
+        this.dataService.getFeeSummaryReport('class')
             .subscribe(function (items) {
-            _this.feeSummary = items;
+            _this.feeSummaryClassWise = items;
+        }, function (error) { return console.log(error); });
+    };
+    ReportPage.prototype.getMonthWiseData = function () {
+        var _this = this;
+        this.dataService.getFeeSummaryReport('month')
+            .subscribe(function (items) {
+            _this.feeSummaryMonthWise = items;
         }, function (error) { return console.log(error); });
     };
     ReportPage.prototype.getSum = function (column) {
         var sum = 0;
-        for (var i = 0; i < this.feeSummary.length; i++) {
-            sum += this.feeSummary[i][column];
+        var objArray = [];
+        if (this.rtype == 'class')
+            objArray = this.feeSummaryClassWise;
+        else
+            objArray = this.feeSummaryMonthWise;
+        for (var i = 0; i < objArray.length; i++) {
+            sum += objArray[i][column];
         }
         return sum;
     };
     ReportPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-report',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\report\report.html"*/'<!--\n\n  Generated template for the ReportPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar color="secondary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Fee Summary\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n<ion-grid>\n\n  <ion-row class="row header">\n\n    <ion-col class="col col-2">\n\n      Class\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      Prev Dues\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      Cur Fee\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      Cur Pmt\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      Disc\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      Tot Bal\n\n    </ion-col>\n\n  </ion-row>\n\n  <ion-row class="row" *ngFor="let fs of feeSummary">\n\n    <ion-col class="col col-2">\n\n      {{fs.clsname}}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{fs.prevdue}}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{fs.curfee}}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{fs.curpmt}}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{fs.curdsc}}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{fs.totalbal}}\n\n    </ion-col>\n\n  </ion-row>\n\n  <ion-row class="row footer">\n\n    <ion-col class="col col-2">\n\n      Total\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{ getSum(\'prevdue\') }}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{ getSum(\'curfee\') }}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{ getSum(\'curpmt\') }}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{ getSum(\'curdsc\') }}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{ getSum(\'totalbal\') }}\n\n    </ion-col>\n\n  </ion-row>\n\n</ion-grid>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\report\report.html"*/,
+            selector: 'page-report',template:/*ion-inline-start:"C:\Dhiraj\Project\sas-mapp\src\pages\report\report.html"*/'<!--\n\n  Generated template for the ReportPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar color="secondary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n      Fee Summary\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n<ion-list>\n\n  <ion-item>\n\n    <ion-label>Select Report Type</ion-label>\n\n    <ion-select [(ngModel)]="rtype" (ionChange)="onTypeChange()">\n\n      <ion-option value="class">Class Wise</ion-option>\n\n      <ion-option value="month">Month Wise</ion-option>\n\n    </ion-select>\n\n  </ion-item>\n\n</ion-list>\n\n\n\n<!-- Class wise fee summary -->\n\n\n\n<ion-grid *ngIf="rtype == \'class\'">\n\n  <ion-row class="row header">\n\n    <ion-col class="col col-2">\n\n      Class\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      Prev Dues\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      Cur Fee\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      Cur Pmt\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      Disc\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      Tot Bal\n\n    </ion-col>\n\n  </ion-row>\n\n  <ion-row class="row" *ngFor="let fs of feeSummaryClassWise">\n\n    <ion-col class="col col-2">\n\n      {{fs.clsname}}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{fs.prevdue}}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{fs.curfee}}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{fs.curpmt}}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{fs.curdsc}}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{fs.totalbal}}\n\n    </ion-col>\n\n  </ion-row>\n\n  <ion-row class="row footer">\n\n    <ion-col class="col col-2">\n\n      Total\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{ getSum(\'prevdue\') }}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{ getSum(\'curfee\') }}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{ getSum(\'curpmt\') }}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{ getSum(\'curdsc\') }}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{ getSum(\'totalbal\') }}\n\n    </ion-col>\n\n  </ion-row>\n\n</ion-grid>\n\n\n\n<!-- Month wise fee summary -->\n\n\n\n<ion-grid *ngIf="rtype == \'month\'">\n\n  <ion-row class="row header">\n\n    <ion-col class="col col-2">\n\n      Month\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      Fee\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      Pmt\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      Disc\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      Drop\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      Tot Bal\n\n    </ion-col>\n\n  </ion-row>\n\n  <ion-row class="row" *ngFor="let fs of feeSummaryMonthWise">\n\n    <ion-col class="col col-2">\n\n      {{monthlist[fs.month-1]}}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{fs.feeamt}}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{fs.pmtamt}}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{fs.dsamt}}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{fs.doamt}}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{fs.totbal}}\n\n    </ion-col>\n\n  </ion-row>\n\n  <ion-row class="row footer">\n\n    <ion-col class="col col-2">\n\n      Total\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{ getSum(\'feeamt\') }}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{ getSum(\'pmtamt\') }}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{ getSum(\'dsamt\') }}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{ getSum(\'doamt\') }}\n\n    </ion-col>\n\n    <ion-col class="col">\n\n      {{ getSum(\'totbal\') }}\n\n    </ion-col>\n\n  </ion-row>\n\n</ion-grid>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Dhiraj\Project\sas-mapp\src\pages\report\report.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__services_data_service__["a" /* DataService */]])
     ], ReportPage);
@@ -1296,5 +1322,5 @@ var ReportPage = (function () {
 
 /***/ })
 
-},[352]);
+},[353]);
 //# sourceMappingURL=main.js.map

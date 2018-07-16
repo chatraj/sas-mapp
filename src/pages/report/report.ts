@@ -15,16 +15,44 @@ import { DataService } from '../../services/data-service';
 })
 export class ReportPage {
 
-  public feeSummary = [];
+  public feeSummaryClassWise = [];
+
+  public feeSummaryMonthWise = [];
+
+  public rtype = 'class';
+
+  public monthlist = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private dataService: DataService) {
   }
 
   ionViewDidLoad() {
-    this.dataService.getFeeSummaryReport()
+    this.getClassWiseData();
+    this.monthlist = this.dataService.getMonthList();
+  }
+
+  public onTypeChange(){
+    if (this.rtype == 'class')
+      this.getClassWiseData();
+    else
+      this.getMonthWiseData();
+  }
+
+  getClassWiseData(){
+    this.dataService.getFeeSummaryReport('class')
       .subscribe(
         (items: any[]) => {
-          this.feeSummary = items;
+          this.feeSummaryClassWise = items;
+        },
+        (error) => console.log(error)
+      );
+  }
+
+  getMonthWiseData(){
+    this.dataService.getFeeSummaryReport('month')
+      .subscribe(
+        (items: any[]) => {
+          this.feeSummaryMonthWise = items;
         },
         (error) => console.log(error)
       );
@@ -32,8 +60,15 @@ export class ReportPage {
 
   public getSum(column) : number {
     let sum = 0;
-    for(let i = 0; i < this.feeSummary.length; i++) {
-      sum += this.feeSummary[i][column];
+    let objArray = [];
+
+    if (this.rtype == 'class')
+      objArray = this.feeSummaryClassWise;
+    else
+      objArray = this.feeSummaryMonthWise;
+
+    for(let i = 0; i < objArray.length; i++) {
+      sum += objArray[i][column];
     }
     return sum;
   }
