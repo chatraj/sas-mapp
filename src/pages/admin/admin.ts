@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, ViewController, NavParams, AlertController } from 'ionic-angular';
+import { NavController, ViewController, NavParams, AlertController, ModalController } from 'ionic-angular';
 import { DataService } from '../../services/data-service';
+import { DropoutPage } from '../dropout/dropout';
 
 /**
  * Generated class for the AdminPage page.
@@ -18,7 +19,7 @@ export class AdminPage {
   public clsid = 1;
   public clslist = [];
 
-  constructor(public navCtrl: NavController, public view: ViewController, public navParams: NavParams, public alertCtrl: AlertController, public dataService: DataService) {
+  constructor(public navCtrl: NavController, public view: ViewController, public navParams: NavParams, public alertCtrl: AlertController, public modalCtrl: ModalController, public dataService: DataService) {
   }
 
   ionViewDidLoad() {
@@ -75,6 +76,27 @@ export class AdminPage {
       buttons: ['OK']
     });
     alert.present();
+  }
+
+  studentDropout(){
+    let addModal = this.modalCtrl.create(DropoutPage, {});
+    addModal.onDidDismiss((item) => {
+          if(item){
+            this.saveDropout(item);
+          }
+    });
+    addModal.present();
+  }
+
+  saveDropout(item){
+    this.dataService.saveDropout(item)
+      .subscribe(
+        (response) => {
+          console.log(response);
+          //this.getFeeData(this.navParams.get('item').ssid);
+        },
+        (error) => console.log(error)
+      );
   }
 
 }

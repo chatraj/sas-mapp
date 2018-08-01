@@ -243,29 +243,29 @@ exports.dropout = function(req, res) {
 	//getStudentList(req, res);
 	var dbc = db.getDBCon();
 	var cMonth = objUtil.getCurrentMonth();
-  console.log('Row to be deleted for record:- ' + Number(req.params.id) + ' from next month onward');
-	sid = req.body.ssid;
+  console.log('Row to be deleted for record:- ' + req.body.ssid + ' from next month onward');
+	ssid = req.body.ssid;
 	dbc.getConnection(function(error, con) {
 		if (!error){
 				con.beginTransaction(function(err){
 					if (err) {
 						res.send(err);
 					}
-					con.query("delete from trx_student_fee where ssid in (select ssid from rl_student_session where sid = " + sid + ") and month > " + cMonth, function(err, result) {
+					con.query("delete from trx_student_fee where ssid = " + ssid + " and month > " + cMonth, function(err, result) {
 						if (err) {
 							console.log('Error while deleting the fee record.');
 							con.rollback(function() {
 										res.send(err);
 							});
 						}
-						con.query("insert into trx_student_fee (ssid, type, month, remarks, amount) values (" + sid + ", 'DO', " + cMonth + ", 'Drop Out', "+ req.body.amount +")", function(err, result) {
+						con.query("insert into trx_student_fee (ssid, type, month, remarks, amount) values (" + ssid + ", 'DO', " + cMonth + ", 'Drop Out', "+ req.body.amount +")", function(err, result) {
 							if (err) {
 								console.log('Update fee adjustment fro drop out');
 								con.rollback(function() {
 											res.send(err);
 								});
 							}
-							con.query("update ms_student set status = 0 where sid = " + sid, function(err, result) {
+							con.query("update ms_student set status = 0 where sid = (select sid from rl_student_session where ssid = " + ssid + ")", function(err, result) {
 								if (err) {
 									console.log('Error while deleting the fee record.');
 									dbc.rollback(function() {

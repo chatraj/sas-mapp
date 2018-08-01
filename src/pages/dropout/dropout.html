@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>
+      Student Dropout
+    </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Class</ion-label>
+      <ion-select [(ngModel)]="clsid" (ionChange)="onClassChange()">
+        <ion-option *ngFor="let cl of clslist" [value]="cl.clsid">{{cl.clsname}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Student</ion-label>
+      <ion-select [(ngModel)]="ssid" (ionChange)="getFeeSummary()">
+        <ion-option *ngFor="let student of studentlist" [value]="student.ssid">{{student.fullname}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      Total Outstanding     :- Rs. {{amount}}
+    </ion-item>
+
+  </ion-list>
+
+  <button full ion-button color="secondary" (click)="validateData()">Submit</button>
+
+</ion-content>
